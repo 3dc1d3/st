@@ -1203,14 +1203,12 @@ xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, int x
 			frcflags = FRC_NORMAL;
 			runewidth = win.cw * ((mode & ATTR_WIDE) ? 2.0f : 1.0f);
 			if ((mode & ATTR_ITALIC) && (mode & ATTR_BOLD)) {
-				font = &dc.ibfont;
-				frcflags = FRC_ITALICBOLD;
+				font = &dc.ifont;
+				frcflags = FRC_ITALIC;
 			} else if (mode & ATTR_ITALIC) {
 				font = &dc.ifont;
 				frcflags = FRC_ITALIC;
 			} else if (mode & ATTR_BOLD) {
-				font = &dc.bfont;
-				frcflags = FRC_BOLD;
 			}
 			yp = winy + font->ascent + win.cyo;
 		}
