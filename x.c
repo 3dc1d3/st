@@ -978,6 +978,7 @@ xloadfonts(char *fontstr, double fontsize)
 	}
 
 	/* Setting character width and height. */
+	chscale = lhfixed / dc.font.height;
 	win.cw = ceilf(dc.font.width * cwscale);
 	win.ch = ceilf(dc.font.height * chscale);
 	win.cyo = ceilf(dc.font.height * (chscale - 1) / 2);
